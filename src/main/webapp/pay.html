@@ -44,30 +44,27 @@
     </header>
     <div class="wrapper">
       <div class="base">
+      
+      <!-- 決済エリア -->
+      
+      <h2>
+      一部を投資にまわして、将来的にも寄付が続けられるようにしませんか？
+      </h2>
+      
+	<p>
+		<label for="amount">投資額:</label>
+		<input type="text" id="amount" style="border: 0; color: #f6931f; font-weight: bold;" />
+	</p>
+	<div id="slider-range-min"></div>
+      
+      <div>
+      	<button class="product_add_btn main_mod">決済へ</button>
+      </div>
+      
 
 
       </div>
       <footer class="footer">
-        <div class="top_footer">
-          <ul class="social_list">
-            <li class="social_item"><a href="#" class="social_link facebook_mod ">facebook</a></li>
-            <li class="social_item"><a href="#" class="social_link twitter_mod ">twitter</a></li>
-            <li class="social_item"><a href="#" class="social_link insta_mod ">insta</a></li>
-          </ul>
-          <div class="subscribe_block"><span class="subscribe_title">Subscribe to get <strong>updates</strong></span>
-            <form class="subscribe_form">
-              <dl class="form_cell form_cell_v1_mod">
-                <dt class="form_c_hline form_v1_mod hline_hide_mod">
-                  <label for="email_subscribe">Email</label>
-                </dt>
-                <dd class="form_c_f_w form_v1_mod hline_hide_mod">
-                  <input type="email" id="email_subscribe" placeholder="Your e-mail..." class="f_c_field default_mod subscribe_mod"/>
-                </dd>
-              </dl>
-              <button class="subscribe_btn">Subscribe</button>
-            </form>
-          </div>
-        </div>
         <div class="footer_in_hold">
           <div class="footer_in">
             <div class="footer_first_row">
@@ -108,5 +105,19 @@
     <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
     <script src="js/all.js"></script>
     <script src="js/main.js"></script>
+    <script>
+  $(function() {
+    $( "#slider-range-min" ).slider({
+      range: "min",
+      value: 1000,
+      min: 500,
+      max: 5000,
+      slide: function( event, ui ) {
+        $( "#amount" ).val( "$" + ui.value );
+      }
+    });
+    $( "#amount" ).val(  $( "#slider-range-min" ).slider( "value" ) + "円");
+  });
+  </script>
   </body>
 </html>
