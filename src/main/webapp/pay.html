@@ -5,6 +5,7 @@
     <title>寄付サイト</title>
     <meta name="viewport" content="width=device-width"/>
     <link rel="stylesheet" media="all" href="styles/main_global.css"/>
+    <link rel="stylesheet" media="all" href="styles/pay.css"/>
   </head>
   <body>
     <header class="header">
@@ -44,12 +45,19 @@
     </header>
     <div class="wrapper">
       <div class="base">
-      
+      <div class="pay_block main_mod">
       <!-- 決済エリア -->
       
+      <div>
       <h2>
-      一部を投資にまわして、将来的にも寄付が続けられるようにしませんか？
+      <input type="checkbox" name="unyou_flag" value="1">
+      将来の寄付に向けて寄付金額の2割を運用します。
       </h2>
+      </div>
+      
+      <div class="pay_block amount">
+      
+      </div>
       
 	<p>
 		<label for="amount">投資額:</label>
@@ -60,9 +68,7 @@
       <div>
       	<button class="product_add_btn main_mod">決済へ</button>
       </div>
-      
-
-
+      </div>
       </div>
       <footer class="footer">
         <div class="footer_in_hold">
