@@ -1,0 +1,32 @@
+.donation_back_block.main_mod {
+	padding: 3.7rem 10rem 10rem;
+	border: 1px none #aaa;
+	text-align: center;
+	font-size: 2.2rem;
+}
+
+.donation_back_block.amount {
+	donation_back: 1px none #aaa;
+    padding: 20px 40px;
+    font-size: 2.2rem;
+}
+
+#slider {
+    width: 300px;
+    margin:20px;
+}
+#slider .ui-slider-range { background: #E38692; }
+#slider .ui-slider-handle {
+    border-color: #c0c0c0;
+    background: #E38692;
+    border-radius: 10px;
+    moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+.ui-slider-horizontal {
+    height: 0.3em;
+}
+.ui-slider-horizontal .ui-slider-handle {
+    top: -.5em;
+    margin-left: -.6em;
+}
