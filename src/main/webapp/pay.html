@@ -48,7 +48,7 @@
       <div class="pay_block main_mod">
       <!-- 決済エリア -->
       
-      <div>
+      <div >
       <h2>
       <input type="checkbox" name="unyou_flag" value="1">
       将来の寄付に向けて寄付金額の2割を運用します。
@@ -56,17 +56,18 @@
       </div>
       
       <div class="pay_block amount">
+		<ul type="amount">
+			<li><label for="amount_label">投資額:</label><label for="amount">3,000円</label></li>
+			<li><label for="amount_label">寄付:</label><label for="amount">600円</label><li>
+		 </ul>
+		 <input type="text" id="amount" style="border: 0; color: #f6931f; font-weight: bold;" />
+      </div>
+      <div class="">
       
       </div>
       
-	<p>
-		<label for="amount">投資額:</label>
-		<input type="text" id="amount" style="border: 0; color: #f6931f; font-weight: bold;" />
-	</p>
-	<div id="slider-range-min"></div>
-      
       <div>
-      	<button class="product_add_btn main_mod">決済へ</button>
+      	<button class="product_add_btn main_mod">OK</button>
       </div>
       </div>
       </div>
@@ -111,19 +112,5 @@
     <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
     <script src="js/all.js"></script>
     <script src="js/main.js"></script>
-    <script>
-  $(function() {
-    $( "#slider-range-min" ).slider({
-      range: "min",
-      value: 1000,
-      min: 500,
-      max: 5000,
-      slide: function( event, ui ) {
-        $( "#amount" ).val( "$" + ui.value );
-      }
-    });
-    $( "#amount" ).val(  $( "#slider-range-min" ).slider( "value" ) + "円");
-  });
-  </script>
   </body>
 </html>
