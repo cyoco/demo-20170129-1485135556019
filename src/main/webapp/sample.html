@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+    <style>
+        #slider {
+            width: 300px;
+            margin:20px;
+        }
+        #slider .ui-slider-range { background: #E38692; }
+        #slider .ui-slider-handle {
+            border-color: #c0c0c0;
+            background: #E38692;
+            border-radius: 10px;
+            moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+        }
+        .ui-slider-horizontal {
+            height: 0.3em;
+        }
+        .ui-slider-horizontal .ui-slider-handle {
+            top: -.5em;
+            margin-left: -.6em;
+        }
+    </style>
+
+    <script>
+        function refreshSwatch() {
+            var slider = $( "#slider" ).slider( "value" );
+            $( "#data" ).html(slider);
+        }
+        $(function() {
+            $( "#slider" ).slider({
+                orientation: "horizontal",
+                range: "min",
+                max: 100,
+                value: 50,
+                slide: refreshSwatch,
+                change: refreshSwatch
+            });
+            $( "#slider" ).slider( "value", 50 );
+        });
+    </script>
+</head>
+<body>
+
+<div id="slider"></div>
+<div><span id="data"></span>%</div>
+
+</body>
+</html>
