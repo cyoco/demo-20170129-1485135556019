@@ -44,9 +44,14 @@
       <div class="base">
 
       <div class="donation_back_block main_mod">
+      <div>ここにスライダーを追加</div>
+      <br>
 
-      <div id="slider"></div>
-      <div><span id="data"></span>%</div>
+      <div>
+      <p class="resizeimage">
+      	<img  src="i/gamen/IMG_3445.JPG" alt="画像１"></object>
+      </p>
+	  </div>
 
       </div>
 
@@ -92,22 +97,6 @@
     <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
     <script src="js/all.js"></script>
     <script src="js/main.js"></script>
-    <script>
-        function refreshSwatch() {
-            var slider = $( "#slider" ).slider( "value" );
-            $( "#data" ).html(slider);
-        }
-        $(function() {
-            $( "#slider" ).slider({
-                orientation: "horizontal",
-                range: "min",
-                max: 100,
-                value: 50,
-                slide: refreshSwatch,
-                change: refreshSwatch
-            });
-            $( "#slider" ).slider( "value", 50 );
-        });
-    </script>
+    <script src="js/donation_back.js"></script>
   </body>
 </html>
