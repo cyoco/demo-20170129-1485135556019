@@ -15,3 +15,7 @@
 p.resizeimage img{
 	width: 100%;
 }
+
+div.answer{
+	text-align: left;
+}

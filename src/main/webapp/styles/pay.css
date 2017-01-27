@@ -14,3 +14,7 @@
     padding: 20px 40px;
     font-size: 2.2rem;
 }
+
+p.resizeimage img{
+	width: 100%;
+}
